@@ -1,0 +1,122 @@
+@import "tailwindcss";
+:root {
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    color: #0f172a;
+    background: #f8fafc;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background: #f8fafc;
+}
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+button {
+    cursor: pointer;
+}
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 999px;
+}
+.input {
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: white;
+    padding: 11px 13px;
+    outline: none;
+    font-size: 14px;
+}
+.input:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgb(59 130 246/0.1);
+}
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: white;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgb(37 99 235/0.18);
+}
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    border-radius: 12px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.danger-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border-radius: 12px;
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 9px 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.panel {
+    border: 1px solid #e2e8f0;
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgb(15 23 42/0.05);
+}
+.table-wrap {
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+th {
+    text-align: left;
+    padding: 12px 14px;
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+td {
+    padding: 14px;
+    border-top: 1px solid #f1f5f9;
+    font-size: 14px;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+.form-grid textarea,
+.form-grid button {
+    grid-column: 1/-1;
+}
+@media (max-width: 640px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
